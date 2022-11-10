@@ -14,9 +14,22 @@ function letsDance(danceStyle) {
   return letsDance;
 }
 
-letsDance("polka")
-  .then((response) => console.log(response))
-  .catch((diss) => console.log(diss));
+// letsDance("waltz")
+//   .then((response) => console.log(response))
+//   .catch((diss) => console.log(diss));
+// -------------------------------------------------------//
+
+async function letsDance2(dance) {
+  try {
+    const danceType = await letsDance(dance);
+    console.log("Kolla läget: ", danceType);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+letsDance2("waltz");
+letsDance2("polka");
 
 //
 //
@@ -91,7 +104,7 @@ letsDance("polka")
 //   return cheerSucceedProject;
 // }
 
-// Lägg i console.log i function body så funkar nedan kod!
+// // Lägg i console.log i function body så funkar nedan kod!
 // research()
 //   .then(makeSketch)
 //   .then(doSketch)
@@ -101,9 +114,6 @@ letsDance("polka")
 //   .then(cheerSucceedProject)
 //   .catch("error");
 
-//
-//
-//
 // Async / Await
 // ----------------------------
 // Polka lover
